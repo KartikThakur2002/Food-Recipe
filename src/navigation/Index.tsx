@@ -9,7 +9,6 @@ import Favaourites from '../screens/favourites/Favaourites';
 import Login from '../screens/login/Login';
 import SignUp from '../screens/signUp/SignUp';
 import useAuth from '../hooks/useAuth';
-
 const Stack = createNativeStackNavigator<RootStackParams>();
 // function RootStackParam() {
 //   const {users} = useAuth();
@@ -39,7 +38,7 @@ const Stack = createNativeStackNavigator<RootStackParams>();
 //     );
 //   }
 // }
-function RootStackParam() {
+const Routing = () => {
   return (
     <Stack.Navigator
       initialRouteName="Splash"
@@ -51,18 +50,6 @@ function RootStackParam() {
       <Stack.Screen name="Favourites" component={Favaourites} />
       <Stack.Screen name="Details" component={Details} />
     </Stack.Navigator>
-  );
-}
-const Routing = () => {
-  return (
-    // <Stack.Navigator screenOptions={{headerShown: false}}>
-    //   <Stack.Screen
-    //     name="Splash"
-    //     component={RootStackParam}
-    //     options={{headerShown: false}}
-    //   />
-    // </Stack.Navigator>
-    <RootStackParam />
   );
 };
 
